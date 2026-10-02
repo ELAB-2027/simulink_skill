@@ -58,10 +58,19 @@ converter operate without having to ask.
      (default separate; combine via Mux only if the user asks for compact).
    - Naming: scopes `Scope_<What>`, tags `g_<dev>`, `v_in`, `i_in`,
      `v_out`, `i_out`. Scopes are fed by **From** tags; the **Goto** sits at
-     the signal source. No long trunks across the canvas.
+     the signal source. No long trunks across the canvas. On flat canvases
+     use a From COLUMN next to the scope: row pitch >= 26 px,
+     `'ShowName','off'` on the relay Froms (name labels otherwise collide
+     with the next row's tag text), and give each From-wire its own turn
+     lane into the scope so no two share a vertical — see
+     `simulink-power-electronics` -> `references/flat-pe-model-recipe.md`
+     (scope zone + label-collision QA).
 4. **Wiring aesthetics**: follow the `simulink-power-electronics` skill ->
    `references/layout-wiring-recipe.md` — explicit positions, signal lines
-   `add_line(...,'autorouting','smart')` only (manual Points are discarded),
+   `add_line(...,'autorouting','smart')` (manual Points on smart lines ARE
+   discarded at save; a persistent manual route on a SIGNAL line =
+   delete_line -> re-add with `'autorouting','off'` -> set Points snapped to
+   the real port positions — see that file's 2026-10-02 additions),
    physical wires straight by PORT ALIGNMENT (manual Points are silently
    ignored on LConn/RConn lines), `diag_count` = 0 in every system, canvas
    screenshot + visual-judge pass.
