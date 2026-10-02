@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# MATLAB / Simulink artifacts
+*.asv
+*.autosave
+*.slxc
+*.slx.r*
+*.mdl.r*
+slprj/
+codegen/
+*.mex*
+
+# Logs & scratch
+*.log
+*.tmp
