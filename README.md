@@ -44,16 +44,16 @@ matlab-skills/
 **macOS / Linux / Git Bash:**
 
 ```bash
-git clone https://github.com/<your-username>/matlab-skills.git
-cd matlab-skills
+git clone https://github.com/ELAB-2027/simulink_skill.git
+cd simulink_skill
 ./install.sh
 ```
 
 **Windows PowerShell:**
 
 ```powershell
-git clone https://github.com/<your-username>/matlab-skills.git
-cd matlab-skills
+git clone https://github.com/ELAB-2027/simulink_skill.git
+cd simulink_skill
 .\install.ps1
 ```
 
